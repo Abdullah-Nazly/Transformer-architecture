@@ -381,7 +381,7 @@ def train_classifier(args, train, dev):
         d_internal=d_internal,
         num_classes=num_classes,
         num_layers=num_layers,
-        use_positional_encoding=True,
+        use_positional_encoding=False,
     ).to(device)
 
     # Make positional encoding match training mode

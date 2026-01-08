@@ -98,7 +98,7 @@ def train_lm(args, train_text, dev_text, vocab_index):
     """
     seq_len = getattr(args, "num_positions", 256)
     d_model = getattr(args, "d_model", 128)
-    d_internal = getattr(args, "d_internal", 384)
+    d_internal = getattr(args, "d_internal", 256)
     num_layers = getattr(args, "num_layers", 3)
     num_heads = getattr(args, "num_heads", 4)
     lr = getattr(args, "lr", 1e-3)
