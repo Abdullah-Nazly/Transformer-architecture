@@ -154,9 +154,12 @@ def train_lm(args, train_text, dev_text, vocab_index):
     train_inputs, train_targets = make_chunks(
         train_tensor, seq_len, stride=chunk_stride
     )
+    print("chunk_stride: ", chunk_stride)
     print(
         f"Training chunks: {len(train_inputs)} (from {len(train_text_limited)} chars)"
     )
+    print("train_inputs: ", train_inputs.shape)
+    print("train_targets: ", train_targets.shape)
     print(
         f"Sequence length: {seq_len}, Vocab size: {vocab_size}, Num heads: {num_heads}"
     )
